@@ -28,7 +28,7 @@ jobs:
         path: ./artifact/bin/
 
     - name: Build Docker image
-        run:
+        run: |
           docker build -t quest2023/zh-action: latest . 
         working-directory: ./
 
