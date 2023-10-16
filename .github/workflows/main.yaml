@@ -9,4 +9,5 @@ jobs:
 
 
   call-workflow-in-local-repo-2:
+    needs: call-workflow-in-local-repo
     uses: ./.github/workflows/a2.yaml
