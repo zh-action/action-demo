@@ -5,5 +5,5 @@ on:
 
 jobs:
   job1:
-    uses: ./.github/workflows/a1.yml@master
+    uses: ./.github/workflows/a1.yaml@master
 
