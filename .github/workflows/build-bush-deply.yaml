@@ -9,5 +9,5 @@ jobs:
 
 
   Deployment:
-    needs: call-workflow-in-local-repo
+    needs: Build_and_Push
     uses: ./.github/workflows/a2.yaml
