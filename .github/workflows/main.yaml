@@ -1,9 +1,9 @@
-name: Call a reusable workflow
+name: Call a reusable workflow and use its outputs
 
 on:
-  push:
-    branches:
-      - master
+  workflow_dispatch:
+
 jobs:
-  call-workflow:
+  job1:
     uses: ./.github/workflows/a1.yml@master
+
