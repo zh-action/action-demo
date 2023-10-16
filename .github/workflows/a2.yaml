@@ -1,0 +1,11 @@
+on:
+  workflow_call:
+
+jobs:
+  test-2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: t2
+        run: |
+          echo "123"
+

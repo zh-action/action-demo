@@ -7,3 +7,6 @@ jobs:
   call-workflow-in-local-repo:
     uses: ./.github/workflows/a1.yaml
 
+
+  call-workflow-in-local-repo-2:
+    uses: ./.github/workflows/a2.yaml
