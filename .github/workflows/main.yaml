@@ -1,4 +1,4 @@
-name: Main Workflow2
+name: Main Workflow-2
 on:
   workflow_dispatch:
 
