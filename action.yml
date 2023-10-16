@@ -1,0 +1,14 @@
+name: 'My Custom Action'
+description: 'This is a custom action description.'
+inputs:
+  input_parameter:
+    description: 'An input parameter description.'
+    required: true
+    default: 'default value'
+outputs:
+  output_parameter:
+    description: 'An output parameter description.'
+runs:
+  using: 'node12'
+  main: 'path/to/entry-point.js'
+
