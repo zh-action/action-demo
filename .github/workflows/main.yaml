@@ -4,6 +4,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  job1:
-    uses: ./.github/workflows/a1.yaml@master
+  call-workflow-in-local-repo:
+    uses: ./.github/workflows/a1.yaml
 
