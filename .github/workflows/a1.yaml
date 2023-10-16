@@ -1,16 +1,11 @@
-name: Secondary Workflow
-
 on:
   workflow_call:
-    inputs:
-      message: # 这里可以定义输入参数，如果需要的话
-        description: 'A custom message'
-        required: true
 
 jobs:
-  secondary_job:
+  test-1:
     runs-on: ubuntu-latest
     steps:
-      - name: Print message from input
-        run: echo "Message from input: ${{ inputs.message }}"
+      - name: t1
+        run: |
+          echo "abc"
 
