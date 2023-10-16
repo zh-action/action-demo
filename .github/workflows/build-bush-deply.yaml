@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  Build and Push:
+  Build_and_Push:
     uses: ./.github/workflows/a1.yaml
 
 
