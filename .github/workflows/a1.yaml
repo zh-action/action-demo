@@ -1,16 +1,16 @@
-name: Build and Push
+name: Secondary Workflow
 
 on:
-  workflow_dispatch:
+  workflow_call:
+    inputs:
+      message: # 这里可以定义输入参数，如果需要的话
+        description: 'A custom message'
+        required: true
 
 jobs:
-  build-and-push:
+  secondary_job:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
+      - name: Print message from input
+        run: echo "Message from input: ${{ inputs.message }}"
 
-    - name: test a1
-      run: |
-        echo "123456"

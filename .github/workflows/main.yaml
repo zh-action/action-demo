@@ -1,25 +1,19 @@
-name: Main Workflow
+name: Call Another Workflow
+
 on:
   workflow_dispatch:
 
 jobs:
-  call_1:
+  call-other-workflow:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
-      
-      - name: Call First Workflow
-        uses: ./a1.yaml@master  # 引用第一个自定义YAML文件中的工作流定义
+        uses: actions/checkout@v3
 
-
-  call_2:
-    needs: call_1
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      
-      - name: Call Second Workflow
-        uses: ./a2.yaml@master  # 引用第二个自定义YAML文件中的工作流定义
+      - name: Call the other workflow
+        uses: actions/workflow-dispatch@v1
+        with:
+          workflow: './a1.yml'  # 指定你的另一个工作流程文件的路径
+          input_username: 'custom-username'  # 传递自定义的用户名作为参数
 
