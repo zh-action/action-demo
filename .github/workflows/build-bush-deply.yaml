@@ -1,0 +1,13 @@
+name: Build push and deylopment
+
+on:
+  workflow_dispatch:
+
+jobs:
+  Build and Push:
+    uses: ./.github/workflows/a1.yaml
+
+
+  Deployment:
+    needs: call-workflow-in-local-repo
+    uses: ./.github/workflows/a2.yaml
