@@ -24,7 +24,7 @@ jobs:
     uses: ./.github/workflows/a1.yaml
     with:
       environment: ${{ inputs.environment }}
-      tag_name: "tag_name"
+      tag_name: ${{ inputs.tag_name }}
 
 
   call-workflow-in-local-repo-2:
