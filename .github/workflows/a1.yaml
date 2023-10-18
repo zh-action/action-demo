@@ -1,5 +1,10 @@
 on:
   workflow_call:
+    inputs:
+      env:
+        required: true
+        type: string
+
 
 jobs:
   test-1:
@@ -7,5 +12,6 @@ jobs:
     steps:
       - name: t1
         run: |
+          echo ${  inputs.env }}
           echo "abc"
 
