@@ -1,9 +1,13 @@
 on:
   workflow_call:
     inputs:
-      env:
+      environment:
         required: true
         type: string
+      tag_name:
+        required: true
+        type: string
+
 
 jobs:
   test-1:
@@ -11,6 +15,7 @@ jobs:
     steps:
       - name: t1
         run: |
-          echo ${{  inputs.env }}
+          echo ${{  inputs.environment }}
+          echo ${{  inputs.tag_name }}
           echo "abc"
 
