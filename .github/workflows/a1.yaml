@@ -5,13 +5,12 @@ on:
         required: true
         type: string
 
-
 jobs:
   test-1:
     runs-on: ubuntu-latest
     steps:
       - name: t1
         run: |
-          echo ${  inputs.env }}
+          echo ${{  inputs.env }}
           echo "abc"
 
